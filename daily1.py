@@ -6,10 +6,18 @@ Divide each person's hours worked by 3 to get their slice count.
 You can't eat a partial slice, so round each person's slice count up to the nearest whole number.
 Each person gets a minimum of two slices.
 Each pizza has 8 slices. Round the total number of pizzas up to the nearest whole pizza.
-'''
+
+Tests:
+Passed:1. get_pizzas_to_order([8, 8, 8]) should return 2.
+Passed:2. get_pizzas_to_order([10, 9, 8, 2, 2, 6, 10]) should return 3.
+Passed:3. get_pizzas_to_order([1, 2, 3, 4, 5]) should return 2.
+Passed:4. get_pizzas_to_order([8, 8, 8, 8, 8, 8, 8, 8]) should return 3.
+Passed:5. get_pizzas_to_order([9, 9, 6]) should return 1.
+Passed:6. get_pizzas_to_order([10, 12, 16, 9, 8, 11, 15, 8, 0]) should return 5.
+
+from freeCodeCamp'''
 
 import math 
-l=eval(input('Hours worked as a list: '))
 def get_pizzas_to_order(hours_worked): 
     s=0 
     for i in hours_worked: 
@@ -21,4 +29,3 @@ def get_pizzas_to_order(hours_worked):
     s=s/8 
     s=math.ceil(s) 
     return s
-print(get_pizzas_to_order(l))
