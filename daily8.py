@@ -10,7 +10,8 @@ Passed:1. get_greeting("06:30") should return "Good morning".
 Passed:2. get_greeting("12:00") should return "Good afternoon".
 Passed:3. get_greeting("21:59") should return "Good evening".
 Passed:4. get_greeting("00:01") should return "Good night".
-Passed:5. get_greeting("11:30") should return "Good morning".'''def get_greeting(s):
+Passed:5. get_greeting("11:30") should return "Good morning".'''
+def get_greeting(s):
     x = float(s[0]) * 10 + float(s[1])
     y = float(s[3]) / 10 + float(s[4]) / 100
     z = x + y
